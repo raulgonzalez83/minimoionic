@@ -112,8 +112,7 @@ angular.module('starter.controllers', [])
 })
 
 .controller('subjectsDetailCtrl', function($scope, $http, ApiEndpoint, $state, $ionicPopup) {
-
-  $scope.message = "Estudiantes matriculados";
+$scope.message = "Estudiantes matriculados";
   $scope.updatedSubject = {};
   $scope.studentsList = {};
   $scope.subject = {};
@@ -141,7 +140,7 @@ angular.module('starter.controllers', [])
               console.log('Error: ' + data);
             });
       });
-      
+      // FIN función para mostrar el nombre de usuario en vez de su ID
     })
     .error(function(data) {
       console.log('Error: ' + data);
@@ -159,20 +158,21 @@ angular.module('starter.controllers', [])
         console.log('Añadido correctamente a la asignatura');
         //PopUp
         if ($scope.subject == null){
-            console.log("'Este usuario no existe o ya está en la lista'")
-         
+          
         }
         else
         {
-         console.log("'Creado'")
+         
         }
       })
       .error(function(data) {
         console.log('Error: ' + data);
+       
       });
   };
 
 })
+
 
 .controller('studentsCtrl', function($scope, $http, ApiEndpoint) {
   $scope.message = "Página estudiantes";
