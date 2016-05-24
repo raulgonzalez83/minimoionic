@@ -1,0 +1,16 @@
+<ion-view view-title={{message}}>
+  <ion-content>
+    <ion-list show-reorder="reordering">
+      <ion-item class="item-remove-animate item-icon-right">
+        <h2>Nombre: {{student.name}}</h2>
+        <p>Direccion: {{student.address}}</p>
+        <p>Teléfono de casa: {{student.phones.home}}</p>
+        <p>Teléfono del trabajo: {{student.phones.work}}</p>
+        <!--<a href="#/edit/{{user.id}}" class="button button-light icon ion-edit"></a>-->
+        <!--<ion-reorder-button class="ion-drag" on-reorder="move(user, $fromIndex, $toIndex)"></ion-reorder-button>-->
+          <button class="button button-assertive" ng-click="remove(student._id)">Eliminar usuario</button>
+      </ion-item>
+    </ion-list>
+    <br><br><br>
+  </ion-content>
+</ion-view>
